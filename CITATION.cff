@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: Cardiac activity and locomotion speed analysis in Cornu aspersum using pixel intensity and a pre-trained deep learning model
+message: "If you use this code or data, please cite it as below."
+type: software
+authors:
+  - family-names: Pardo-Sarmiento
+    given-names: Edgar Alejandro
+year: 2026
+repository-code: https://github.com/PardoEdgar/snail-cardiac-activity
+license: MIT
