@@ -24,7 +24,7 @@ All analyses were conducted in R. Scripts are provided in sequential order.
    
 ## Requirements
 - R (version 4.4.2)
-- Required packages: tidyverse, ggplot2, etc.
+- Required packages: tidyverse, pracma, gridExtra, readxl, signal, writexl, RHRV.
 - Fiji-ImageJ
 - Required plugins: Java, CSBDeep, TensorFlow, TrackMate, StarDist 2D, TrackMate-StarDist 2D
   
