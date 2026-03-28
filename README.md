@@ -12,9 +12,15 @@ This repository contains all data and code used in the study:
 ## Reproducibility
 All analyses were conducted in R. Scripts are provided in sequential order.
 
-1. 01_data_cleaning.R  
-2. 02_analysis.R  
-3. 03_figures.R
+1. 01_heart_pixel_data_obtention.imj
+2. 01_Optocardiography.R
+3. 02_Extracting_HRV_metrics.R
+4. 03_HR_HRV_vs_behavioral_states_analyses.R
+5. 02_speed_data_obtention.imj
+6. 04_Speed_data_curation.R
+7. 05_Speed_vs_HR_analyses.R
+8. 06_Body_size_vs_HR_analyses.R
+
    
 ## Requirements
 - R (version 4.4.2)
