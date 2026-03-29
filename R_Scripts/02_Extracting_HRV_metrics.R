@@ -24,43 +24,43 @@ extract_HRV_metrics_retracted <- function(hrv_obj, id) {
      RR_ms <- hrv_obj$Beat 
     data.frame(
       ID = id,
-      MeanHR_ret = mean(hrv_obj$HR, na.rm = TRUE),
-      SDNN_ret = ta$SDNN,
-      RMSSD_ret = ta$rMSSD,
-      RRms_ret = mean(RR_ms$RR), 
+      MeanHR_retracted= mean(hrv_obj$HR, na.rm = TRUE),
+      SDNN_retracted= ta$SDNN,
+      RMSSD_retracted= ta$rMSSD,
+      RRms_retracted= mean(RR_ms$RR), 
       stringsAsFactors = FALSE
     )
   } else {
     data.frame(
       ID = id,
-      MeanHR_ret = NA,
-      SDNN_ret = NA,
-      RMSSD_ret = NA,
-      RRms_ret = NA,
+      MeanHR_retracted= NA,
+      SDNN_retracted= NA,
+      RMSSD_retracted= NA,
+      RRms_retracted= NA,
       stringsAsFactors = FALSE
     )
   }
 }
 
-extract_metrics_snail_mov <- function(hrv_obj, id) {
+extract_metrics_snail_moving<- function(hrv_obj, id) {
   if (!is.null(hrv_obj$TimeAnalysis[[1]])) {
     ta <- hrv_obj$TimeAnalysis[[1]] 
      RR_ms <- hrv_obj$Beat 
      data.frame(
       ID = id,
-      MeanHR_mov = mean(hrv_obj$HR, na.rm = TRUE),
-      SDNN_mov = ta$SDNN,
-      RMSSD_mov = ta$rMSSD,
-      RRms_mov = mean(RR_ms$RR), 
+      MeanHR_moving= mean(hrv_obj$HR, na.rm = TRUE),
+      SDNN_moving= ta$SDNN,
+      RMSSD_moving= ta$rMSSD,
+      RRms_moving= mean(RR_ms$RR), 
       stringsAsFactors = FALSE
     )
   } else {
     data.frame(
       ID = id,
-      MeanHR_mov = NA,
-      SDNN_mov = NA,
-      RMSSD_mov = NA,
-      RRms_mov = NA,
+      MeanHR_moving= NA,
+      SDNN_moving= NA,
+      RMSSD_moving= NA,
+      RRms_moving= NA,
       stringsAsFactors = FALSE
     )
   }
@@ -69,7 +69,7 @@ extract_metrics_snail_mov <- function(hrv_obj, id) {
 grouped <- all_valleys_complete_retracted %>% group_by(ID)
 data_by_snail<- grouped %>% group_split()
 Real_IDs <- grouped %>% group_keys() %>% pull(1)
-Results_HRV_ret <- lapply(data_by_snail, function(df_snail) {
+Results_HRV_retracted<- lapply(data_by_snail, function(df_snail) {
   HRV <- CreateHRVData()
   HRV <- LoadBeatVector(HRV, df_snail$time)
   HRV <- BuildNIHR(HRV)
@@ -83,7 +83,7 @@ HRV_metrics_retracted <- imap_dfr(Results_HRV_ret, ~ extract_HRV_metrics_retract
 grouped <- all_valleys_complete_moving %>% group_by(ID)
 data_by_snail<- grouped %>% group_split()
 Real_IDs <- grouped %>% group_keys() %>% pull(1)
-Results_HRV_mov <- lapply(data_by_snail, function(df_snail) {
+Results_HRV_moving<- lapply(data_by_snail, function(df_snail) {
   HRV <- CreateHRVData()
   HRV <- LoadBeatVector(HRV, df_snail$time)
   HRV <- BuildNIHR(HRV)
@@ -91,8 +91,8 @@ Results_HRV_mov <- lapply(data_by_snail, function(df_snail) {
   HRV <- CreateTimeAnalysis(HRV, size = 80, interval = 7.8125)
   return(HRV)
 })
-names(Results_HRV_mov) <- as.character(Real_IDs)
-HRV_metrics_moving <- imap_dfr(Results_HRV_mov, ~ extract_metrics_snail_mov(.x, .y))
+names(Results_HRV_moving) <- as.character(Real_IDs)
+HRV_metrics_moving <- imap_dfr(Results_HRV_moving, ~ extract_metrics_snail_moving(.x, .y))
 
 extract_RR_snail_retracted <- function(hrv_obj, id) {
   if (!is.null(hrv_obj$TimeAnalysis[[1]])) {
@@ -100,13 +100,13 @@ extract_RR_snail_retracted <- function(hrv_obj, id) {
     RR_ms <- hrv_obj$Beat
     data.frame(
       ID = id,
-      RRms_ret = (RR_ms$RR),
+      RRms_retracted= (RR_ms$RR),
       stringsAsFactors = FALSE
     )
   } else {
     data.frame(
       ID = id,
-      RRms_ret = NA,
+      RRms_retracted= NA,
       stringsAsFactors = FALSE
     )
   }
@@ -120,13 +120,13 @@ extract_RR_snail_moving<- function(hrv_obj, id) {
     RR_ms <- hrv_obj$Beat
     data.frame(
       ID = id,
-      RRms_mov = (RR_ms$RR),
+      RRms_moving= (RR_ms$RR),
       stringsAsFactors = FALSE
     )
   } else {
     data.frame(
       ID = id,
-      RRms_mov = NA,
+      RRms_moving= NA,
       stringsAsFactors = FALSE
     )
   }
@@ -143,17 +143,17 @@ pNN100 <- function(rr, x = 100) {
 
 pnn100_retracted <- RR_retracted %>%
   group_by(ID) %>%
-  summarise(pNN100_ret = pNN100(RRms_ret, x = 100))
+  summarise(pNN100_retracted= pNN100(RRms_retracted, x = 100))
 
 pnn100_moving <- RR_moving %>%
   group_by(ID) %>%
-  summarise(pNN100_mov = pNN100(RRms_mov, x = 100)) 
+  summarise(pNN100_moving= pNN100(RRms_moving, x = 100)) 
 
 pnn100_all <- left_join(pnn100_retracted, pnn100_moving, by = "ID")
 
 HRV_metrics_all <- HRV_metrics_moving %>%
   left_join(HRV_metrics_retracted, by = "ID") %>%
   left_join(pnn100_all, by = "ID")
-
+View(HRV_metrics_all)
 write_xlsx(HRV_all_metrics, "HRV_all_metrics.xlsx")
 
