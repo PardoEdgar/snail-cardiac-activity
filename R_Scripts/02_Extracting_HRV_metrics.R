@@ -10,7 +10,7 @@ library(readxl)
 library(writexl)
 library(RHRV)
 
-path <- "C:/Users/jandr/OneDrive - Universidad del rosario/Heart_rate_speed_HRV/Datos/Videos freq. cardiaca/Results_optocardiography/all_valleys_complete.xlsx"
+path <- "all_valleys_complete.xlsx"
 all_valleys_complete <- read_xlsx(path)
 
 all_valleys_complete_retracted <- all_valleys_complete %>% 
