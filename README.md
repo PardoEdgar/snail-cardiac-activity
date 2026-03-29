@@ -7,7 +7,7 @@ This repository contains all data and code used in the study:
 ## Contents
 - data/: raw and processed datasets
 - scripts/: R scripts for data extraction and analysis
-- imagej/: ImageJ macros for pixel intensity calculation and stripe detection
+- imagej/: ImageJ macros for pixel intensity calculation and example for stripe detection
 
 ## Reproducibility
 All analyses were conducted in R. Scripts are provided in sequential order.
