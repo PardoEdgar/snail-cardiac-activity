@@ -17,9 +17,8 @@ All analyses were conducted in R. Scripts are provided in sequential order.
 3. 02_Extracting_HRV_metrics.R
 4. 03_HR_HRV_vs_behavioral_states_analyses.R
 5. 02_Macro_Trackmate_stripe_tracking.ijm
-6. 04_Speed_data_curation.R
-7. 05_Speed_vs_HR_analyses.R
-8. 06_Body_size_vs_HR_analyses.R
+6. 04_speed_curation_and_speed_vs_heartrate_analyses.R
+7. 05_Body_size_vs_HR_analyses.R
 
    
 ## Requirements
