@@ -9,7 +9,7 @@ library(readxl)
 library(ggplot2)
 library(gridExtra)
 
-path <- ("C:/Users/jandr/OneDrive - Universidad del rosario/Heart_rate_speed_HRV/Datos/GitHub/HRV_all_metrics.xlsx")
+path <- ("/HRV_all_metrics.xlsx")
 metrics_all <- read_xlsx(path)
 
 large_metrics_all <-  metrics_all %>% 
