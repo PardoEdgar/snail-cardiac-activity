@@ -6,13 +6,12 @@ output: html_document
 ---
 
 library(dplyr)
-library(readxl)
 library(lmodel2)
 
-path_1 <- "C:/Users/jandr/OneDrive - Universidad del rosario/Heart_rate_speed_HRV/Datos/GitHub/HRV_all_metrics.xlsx"
-HRV_all_metrics <- read_xlsx(path_1)
-path_2 <- "C:/Users/jandr/OneDrive - Universidad del rosario/Heart_rate_speed_HRV/Datos/GitHub/Snail_mass_behavioral_states.xlsx"
-Snail_mass_behavioral_states <- read_xlsx(path_2)
+path_1 <- "C:/Users/jandr/OneDrive - Universidad del rosario/Heart_rate_speed_HRV/Datos/GitHub/HRV_all_metrics.csv"
+HRV_all_metrics <- read_csv(path_1)
+path_2 <- "C:/Users/jandr/OneDrive - Universidad del rosario/Heart_rate_speed_HRV/Datos/GitHub/Snail_mass_behavioral_states.csv"
+Snail_mass_behavioral_states <- read_csv(path_2)
 
 HRV_mass_all <- HRV_all_metrics %>%
   left_join(Snail_mass_behavioral_states, by = "Snail")
