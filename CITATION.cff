@@ -1,10 +1,32 @@
 cff-version: 1.2.0
-title: Cardiac activity and locomotion speed analysis in Cornu aspersum using pixel intensity and a pre-trained deep learning model
-message: "If you use this code or data, please cite it as below."
-type: software
+title: "Cardiac activity and locomotion speed analysis in the invasive land snail Cornu aspersum using pixel intensity changes and the pre-trained deep learning model StarDist 2D"
+message: "If you use this dataset or workflow, please cite it as below."
+type: dataset
+
 authors:
-  - family-names: Pardo-Sarmiento
-    given-names: Edgar Alejandro
+  - family-names: "Pardo-Sarmiento"
+    given-names: "Edgar Alejandro"
+
 year: 2026
-repository-code: https://github.com/PardoEdgar/snail-cardiac-activity
-license: MIT
+
+repository-code: "https://github.com/PardoEdgar/snail-cardiac-activity"
+
+license: "MIT"
+
+abstract: >
+  This repository provides a computational workflow for quantifying cardiac activity and locomotion 
+  speed in the land snail Cornu aspersum using optocardiography and treadmill-based assays. 
+  The approach combines pixel intensity analysis, automated tracking of locomotion speed using TrackMate, 
+  and deep learning-based segmentation with StarDist 2D. The pipeline integrates signal processing 
+  and heart rate variability (HRV) analysis in R aiming to understand the realationship between 
+  physiological and behavioral dynamics.
+
+keywords:
+  - optocardiography
+  - heart rate variability
+  - locomotion
+  - TrackMate
+  - StarDist
+  - image analysis
+  - gastropod physiology
+  - Cornu aspersum
