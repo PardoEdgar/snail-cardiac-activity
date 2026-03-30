@@ -1,4 +1,4 @@
-# snail-cardiac-activity
+# snail-cardiac-activity (2026)
 
 This repository contains all data and code used in the study:
 
