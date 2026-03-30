@@ -81,5 +81,5 @@ All data and code required to reproduce the analyses are included in this reposi
 
 ## License
 
-- Code: MIT License  
-- Data and figures: CC BY 4.0  
+The source code in this repository is licensed under the MIT License.  
+All data and figures are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
