@@ -21,7 +21,7 @@ Valleys_speed_data <- read_csv(path)
 path_2 <- "/Snail_mass_speed.xlsx"
 Snail_mass_speed <- read_xlsx(path_2)
 
-folder_path_speed <- "/Speed_data_files"
+folder_path_speed <- "/Spot_tracking_results"
 files <-  list.files(path = folder_path_speed, pattern = "*spots*", full.names = TRUE)
 read_and_label <- function(file) {
   df <- read.csv(file)
