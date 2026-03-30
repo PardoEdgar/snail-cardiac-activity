@@ -39,7 +39,10 @@ All analyses were conducted in R. Scripts are provided in sequential order:
   - readxl  
   - signal  
   - writexl  
-  - RHRV  
+  - RHRV
+  - lme4
+  - MuMIn
+  - scales
 
 ### Fiji / ImageJ
 - Fiji-ImageJ
@@ -53,19 +56,19 @@ All analyses were conducted in R. Scripts are provided in sequential order:
 
 ---
 
-## 📊 Data Availability
+## Data Availability
 
 All data and code required to reproduce the analyses are included in this repository.
 
 ---
 
-## 👤 Author
+## Author
 
 **E. Alejandro Pardo-Sarmiento**
 
 ---
 
-## 📄 License
+## License
 
 - Code: MIT License  
 - Data and figures: CC BY 4.0  
