@@ -2,7 +2,7 @@
 
 This repository contains all data and code used in the study:
 
-**"Cardiovascular adjustments during experimentally induced retraction and locomotion in Cornu aspersum"**
+**"Cardiovascular adjustments during experimentally induced retraction and locomotion in the invasive terrestrial snail Cornu aspersum (Müller, 1774)"**
 
 ---
 
