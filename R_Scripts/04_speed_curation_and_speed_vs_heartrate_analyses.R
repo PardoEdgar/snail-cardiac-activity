@@ -140,7 +140,7 @@ Speed_vs_HeartRate_5_seconds$`speed_(cm_min)`<- abs(Speed_vs_HeartRate_5_seconds
 
 Speed_vs_HeartRate_5_seconds <- Speed_vs_HeartRate_5_seconds %>% left_join(Snail_mass_speed, by="Snail")
 
-write_xlsx(Speed_vs_HeartRate_5_seconds, "Speed_vs_HeartRate_5_seconds.xlsx")
+write_csv(Speed_vs_HeartRate_5_seconds, "Speed_vs_HeartRate_5_seconds.csv")
 
 
 shapiro.test(Speed_vs_HeartRate_5_seconds$`speed_(cm_min)`)
