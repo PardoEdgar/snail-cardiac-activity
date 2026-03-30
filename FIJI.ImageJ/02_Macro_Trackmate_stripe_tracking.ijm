@@ -1,5 +1,5 @@
 waitForUser(
-"First, open the example video (Moving_snail_example in folder: Data) with the FFmpeg plugin for tracking,\n"+
+"First, open the example video (Moving_snail_example.mp4 in folder: Data) with the FFmpeg plugin,\n"+
 "then continue running this macro.\n"+
 "Click OK to proceed after opening the video")
 makeRectangle(567, 17, 303, 100);
