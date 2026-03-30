@@ -43,6 +43,7 @@ All analyses were conducted in R. Scripts are provided in sequential order:
   - lme4
   - MuMIn
   - scales
+  - lmodel2
 
 ### Fiji / ImageJ
 - Fiji-ImageJ
