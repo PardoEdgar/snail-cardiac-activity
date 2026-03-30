@@ -6,12 +6,11 @@ output: html_document
 ---
 
 library(tidyverse)
-library(readxl)
 library(writexl)
 library(RHRV)
 
-path <- "/all_valleys_complete.xlsx"
-all_valleys_complete <- read_xlsx(path)
+path <- "/all_valleys_complete.csv"
+all_valleys_complete <- read_csv(path)
 
 all_valleys_complete_retracted <- all_valleys_complete %>% 
   dplyr::filter(state == "Retracted")
