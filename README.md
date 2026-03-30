@@ -38,7 +38,7 @@ All analyses were conducted in R. Scripts are provided in sequential order:
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 ### R
 - R (version 4.4.2)
