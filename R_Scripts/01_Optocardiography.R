@@ -6,7 +6,6 @@ output: html_document
 ---
 library(tidyverse)
 library(pracma)
-library(readxl)
 library(signal)
 library(writexl)
 
