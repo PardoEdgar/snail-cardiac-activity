@@ -1,11 +1,17 @@
 cff-version: 1.2.0
-title: "Cardiac activity and locomotion speed analysis in the invasive land snail Cornu aspersum using pixel intensity changes and the pre-trained deep learning model StarDist 2D"
+title: "Cardiovascular adjustments during experimentally induced retraction and locomotion in the invasive terrestrial snail Cornu aspersum (Müller, 1774)"
 message: "If you use this dataset or workflow, please cite it as below."
 type: dataset
 
 authors:
   - family-names: "Pardo-Sarmiento"
     given-names: "Edgar Alejandro"
+  - family-names: "Hernandez Benavides"
+    given-names: "Juan Pablo"
+  - family-names: "Buitrago-Ricaurte"
+    given-names: "Natalia"
+  - family-names: "Riveros"
+    given-names: "Andre J."
 
 year: 2026
 
@@ -18,8 +24,8 @@ abstract: >
   speed in the land snail Cornu aspersum using optocardiography and treadmill-based assays. 
   The approach combines pixel intensity analysis, automated tracking of locomotion speed using TrackMate, 
   and deep learning-based segmentation with StarDist 2D. The pipeline integrates signal processing 
-  and heart rate variability (HRV) analysis in R aiming to understand the realationship between 
-  physiological and behavioral dynamics.
+  and heart rate variability (HRV) analysis in R aiming to understand the relationship between 
+  physiological adjustments and experimentally induced behavioral states.
 
 keywords:
   - optocardiography
