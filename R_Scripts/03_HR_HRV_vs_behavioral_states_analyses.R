@@ -5,12 +5,11 @@ output: html_document
 ---
 
 library(tidyverse)
-library(readxl)
 library(ggplot2)
 library(gridExtra)
 
-path <- ("/HRV_all_metrics.xlsx")
-metrics_all <- read_xlsx(path)
+path <- ("/HRV_all_metrics.csv")
+metrics_all <- read_csv(path)
 
 large_metrics_all <-  metrics_all %>% 
   mutate(across(where(is.character), ~as.numeric(.))) %>%
