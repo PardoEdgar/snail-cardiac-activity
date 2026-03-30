@@ -154,5 +154,5 @@ HRV_metrics_all <- HRV_metrics_moving %>%
   left_join(HRV_metrics_retracted, by = "ID") %>%
   left_join(pnn100_all, by = "ID")
 View(HRV_metrics_all)
-write_xlsx(HRV_all_metrics, "HRV_all_metrics.xlsx")
+write_csv(HRV_all_metrics, "HRV_all_metrics.csv")
 
