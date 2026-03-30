@@ -21,7 +21,7 @@ Signal processing and heart rate variability (HRV) analyses are implemented in R
 - `data/`: Raw and processed datasets  
 - `scripts/`: R scripts for data extraction and analysis  
 - `imagej/`: ImageJ macros for pixel intensity extraction and stripe detection  
-
+- `Figures/`: Optocardiograms and Experimental setup images for Optocardiography
 ---
 
 ## Reproducibility
