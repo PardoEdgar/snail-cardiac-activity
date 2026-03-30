@@ -429,5 +429,5 @@ all_retracted_valleys <- all_retracted_valleys %>%
 all_moving_valleys <- all_moving_valleys %>% 
   mutate(estado = "Moving")
 all_valleys_complete <- bind_rows(all_retracted_valleys, all_moving_valleys)
-write_xlsx(all_valleys_complete, "all_valleys_complete.xlsx")
+write_csv(all_valleys_complete, "all_valleys_complete.csv")
 
