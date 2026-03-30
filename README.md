@@ -26,7 +26,7 @@ Signal processing and heart rate variability (HRV) analyses are implemented in R
 
 ## Reproducibility
 
-All analyses were conducted in R. Scripts are provided in sequential order:
+All scripts conducted in ImageJ and R are provided in sequential order:
 
 1. `01_heart_pixel_data_obtention.imj`  
 2. `01_Optocardiography.R`  
