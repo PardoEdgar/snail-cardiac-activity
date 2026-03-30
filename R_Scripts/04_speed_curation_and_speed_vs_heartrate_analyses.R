@@ -7,7 +7,6 @@ output: html_document
 
 library(tidyverse)
 library(writexl)
-library(readxl)
 library(stringr)
 library(purrr)
 library(lme4)
@@ -18,8 +17,8 @@ library(MuMIn)
 path <- "/Valleys_speed_data.csv"
 Valleys_speed_data <- read_csv(path)
 
-path_2 <- "/Snail_mass_speed.xlsx"
-Snail_mass_speed <- read_xlsx(path_2)
+path_2 <- "/Snail_mass_speed.csv"
+Snail_mass_speed <- read_csv(path_2)
 
 folder_path_speed <- "/Spot_tracking_results"
 files <-  list.files(path = folder_path_speed, pattern = "*spots*", full.names = TRUE)
